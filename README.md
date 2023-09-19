@@ -1,1 +1,1 @@
-Proyecto de Blog funcional utilizando Nodejs y RESTAPIs
+Proyecto de Blog utilizando Nodejs y RESTAPIs
