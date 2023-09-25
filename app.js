@@ -10,6 +10,8 @@ const { v4: uuidv4 } = require('uuid');
 const feedRoutes = require('./routes/feed');
 const authRoutes = require('./routes/auth');
 
+require('dotenv').config();
+
 const app = express();
 
 const fileStorage = multer.diskStorage({
@@ -71,7 +73,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    'mongodb+srv://jorgeNode:prueba123456@cluster0.gmxutxg.mongodb.net/messages?retryWrites=true&w=majority'
+    process.env.SECRET_1
   )
   .then(result => {
     app.listen(8080);
